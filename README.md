@@ -34,5 +34,5 @@ You can get a listing of the members of an ar file with the -t parameter, for in
 `ar -t /usr/lib/libc.a`
 
 # Examples
-- [Static Library](./tree/master/static_library)
-- [Dynamic Library](./tree/master/dynamic_library)
+- [Static Library](./static_library)
+- [Dynamic Library](./dynamic_library)
