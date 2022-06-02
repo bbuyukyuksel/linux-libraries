@@ -1,0 +1,17 @@
+TARGET = prog
+INCLUDE = include
+
+$(TARGET): main.o lib.a
+	g++ $^ -o $@ -I$(INCLUDE)
+
+main.o: main.cpp
+	g++ -c $< -o $@ -I$(INCLUDE)
+
+lib.a: lib1.o lib2.o
+	ar rcs $@ $^
+
+lib1.o: lib1.cpp lib1.h
+	g++ -c -o $@ $< -I$(INCLUDE)
+
+lib2.o: lib2.cpp lib2.h
+	g++ -c -o $@ $< -I$(INCLUDE)
